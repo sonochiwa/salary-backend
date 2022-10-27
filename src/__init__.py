@@ -6,7 +6,7 @@ from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-cors = CORS(app)
+CORS(app)
 app.config.from_object(config.Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
